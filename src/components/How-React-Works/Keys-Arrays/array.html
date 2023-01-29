@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@16.12.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+    <title>Keys and Arrays</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <style>
+      label {
+        display: flex;
+        margin: 16px 0;
+      }
+
+      input {
+        margin-right: 10px;
+      }
+    </style>
+    <script type="text/babel">
+      let inputs = [
+        <label>
+          <input type="checkbox">Bill</input>
+        </label>,
+        <label>
+          <input type="checkbox">Jeff</input>
+        </label>,
+        <label>
+          <input type="checkbox">Tim</input>
+        </label>,
+        <label>
+          <input type="checkbox">Zuck</input>
+        </label>,
+      ];
+
+      ReactDOM.render(inputs, document.getElementById("root"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@16.12.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+    <title>Reverse Arrays</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <style>
+      label {
+        display: flex;
+        margin: 16px 0;
+      }
+
+      input {
+        margin-right: 10px;
+      }
+    </style>
+    <script type="text/babel">
+      let fields = [
+        <label key={1}>
+          <input type="checkbox" /> Bill
+        </label>,
+        <label key={2}>
+          <input type="checkbox" /> Jeff
+        </label>,
+        <label key={3}>
+          <input type="checkbox" /> Tim
+        </label>,
+        <label key={4}>
+          <input type="checkbox" /> Zuck
+        </label>,
+      ];
+
+      function App(props) {
+        return (
+          <div>
+            <h2>RSVPs</h2>
+            {props.fields}
+            <button onClick={reverseAndRender}>Reverse</button>
+          </div>
+        );
+      }
+
+      function reverseAndRender() {
+        ReactDOM.render(
+          <App fields={fields.reverse().slice(0)} />,
+          document.getElementById("root")
+        );
+      }
+      reverseAndRender();
+    </script>
+  </body>
+</html>
