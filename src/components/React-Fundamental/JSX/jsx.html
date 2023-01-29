@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Jsx</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="root1"></div>
+    <p>this is how jsx converts files</p>
+    <script type="text/babel">
+      let element = <div className="test">Hello World</div>;
+      ReactDOM.render(element, document.getElementById("root"));
+    </script>
+    <!-- <script type="text/javascript">
+      let element2 = React.createElement(
+        "div",
+        { className: "test" },
+        "Hello, world!"
+      );
+      ReactDOM.render(element2, document.getElementById("root1"));
+    </script> -->
+  </body>
+</html>
