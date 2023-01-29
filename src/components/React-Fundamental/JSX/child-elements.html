@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Untitled App</title>
+    <script src="https://unpkg.com/react@16.9.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // Children can be text.
+      let textChildren = <p>What good is a phone call...</p>;
+
+      // Children can be elements.
+      let elementChildren = (
+        <p>
+          <em>If you're unable...</em>
+        </p>
+      );
+
+      // Or they can be a mix of both.
+      let mixedChildren = (
+        <p>
+          To <strong>speak?</strong>
+        </p>
+      );
+
+      ReactDOM.render(
+        React.createElement(
+          "div",
+          null,
+          textChildren,
+          elementChildren,
+          mixedChildren
+        ),
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
