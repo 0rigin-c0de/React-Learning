@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attributes</title>
+    <script src="https://unpkg.com/react@16.9.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+      var form = React.createElement(
+        "form",
+        null,
+        React.createElement("input", {
+          value: "Test 1",
+          tabIndex: 3,
+        }),
+        React.createElement("input", {
+          value: "Test 2",
+
+          tabIndex: 2,
+
+          hidden: true,
+        }),
+
+        React.createElement("input", {
+          value: "Test 3",
+          tabIndex: 1,
+        })
+      );
+
+      ReactDOM.render(form, document.getElementById("root"));
+    </script>
+  </body>
+</html>
