@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <script src="https://unpkg.com/react@16.9.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      let element = React.createElement(
+        // The first argument is the element's `type`
+        "a",
+
+        // The second argument is the element's `props`
+        { href: "https://github.com/0rigin-c0de" },
+
+        // Any further arguments, if given, are merged into to
+        // `props` under the name `children`.
+        React.createElement("img", {
+          src: "https://avatars.githubusercontent.com/u/106311923?v=4",
+          alt: "profile",
+        }),
+        React.createElement("span", null, "By Github")
+      );
+      console.log(element.props.children[0].type);
+      console.log(element.props.children[1].props.children);
+
+      ReactDOM.render(element, document.getElementById("root"));
+    </script>
+  </body>
+</html>
