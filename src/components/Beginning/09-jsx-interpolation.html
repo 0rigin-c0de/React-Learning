@@ -1,0 +1,27 @@
+<body>
+  <div id="parent"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const parentElement = document.getElementById("parent");
+
+    function CharacterCount({ text }) {
+      return (
+        <div>
+          {`The text "${text}" has`}{" "}
+          <strong>{text.length ? text.length : "No"}</strong> characters
+        </div>
+      );
+    }
+    React.createElement("div", null, "");
+    const element = (
+      <>
+        <CharacterCount text="Hello World"></CharacterCount>
+        <CharacterCount text=""> </CharacterCount>
+      </>
+    );
+
+    ReactDOM.render(element, parentElement);
+  </script>
+</body>
