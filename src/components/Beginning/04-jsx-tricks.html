@@ -1,0 +1,15 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const rootElement = document.getElementById("root");
+    const className = "container";
+    const children = "Hello World";
+    const props = { children, className };
+    const element = <div id="app-root" {...props} className="not-container" />;
+    console.log(element);
+    ReactDOM.render(element, rootElement);
+  </script>
+</body>
