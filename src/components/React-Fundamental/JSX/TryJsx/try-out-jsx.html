@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Jsx</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      let rootElement = (
+        <div className="ContactList">
+          <h2 className="ContactList-title">Contacts</h2>
+          <div className="Contact">
+            <div className="Contact-avatar">JN</div>
+            <span className="Contact-name">James Nelson</span>
+            <a href="mailto:Shunnu@gmail.com">Shunnu807@gmail.com</a>
+          </div>
+          <div className="Contact">
+            <div className="Contact-avatar">M</div>
+            <span className="Contact-name">Me</span>
+            <a href="mailto:me@example.com">me@example.com</a>
+          </div>
+        </div>
+      );
+
+      ReactDOM.render(rootElement, document.getElementById("root"));
+    </script>
+  </body>
+</html>
