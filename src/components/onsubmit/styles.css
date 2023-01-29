@@ -1,0 +1,28 @@
+.SearchForm {
+    background-color: #61dafb;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 0;
+  }
+  
+  .SearchForm > input {
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 24px;
+    margin: 3px;
+    line-height: 24px;
+    padding: 3px 6px;
+    vertical-align: middle;
+  }
+  
+  .SearchForm > button {
+    background: transparent;
+    border: none;
+    color: white;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 3px;
+    text-align: center;
+    width: 30px;
+  }
