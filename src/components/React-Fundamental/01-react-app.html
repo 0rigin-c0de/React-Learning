@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React app!</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.9.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.production.min.js"></script>
+    <script>
+      let createElement = React.createElement;
+
+      let rootElement = createElement(
+        "div",
+        {},
+        createElement("h1", {}, "Contacts"),
+        createElement(
+          "ul",
+          {},
+          createElement(
+            "li",
+            {},
+            createElement(
+              "a",
+              { href: "mailto:codingninnja@gmail.com" },
+              "Shunnu"
+            )
+          ),
+          createElement(
+            "li",
+            {},
+            createElement("a", { href: "mailto:shunnu@gmail.com" }, "Me")
+          )
+        )
+      );
+
+      // The `ReactDOM` variable is set by the second `<script>` tag
+      // in the above HTML file
+      let domNode = document.getElementById("root");
+      ReactDOM.render(rootElement, domNode);
+    </script>
+  </body>
+</html>
