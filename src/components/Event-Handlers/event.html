@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <title>Event Handler</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <style>
+      button {
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 150px;
+        height: 40px;
+      }
+    </style>
+    <script type="text/babel">
+      const button = (
+        <button
+          onClick={() => {
+            window.alert(
+              `Here I am with a brain the size of a planet,
+      and they tell me to add a contact.`
+            );
+          }}
+        >
+          Add a Contact
+        </button>
+      );
+      const domNode = document.getElementById("root");
+      ReactDOM.render(button, domNode);
+    </script>
+  </body>
+</html>
