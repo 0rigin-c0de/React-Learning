@@ -1,0 +1,8 @@
+.blue-border {
+    cursor: pointer;
+    border: 3px solid blue;
+  }
+
+  .blue-border:hover {
+    border-style: dotted;
+  }
